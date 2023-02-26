@@ -10,12 +10,13 @@ import {
 } from 'react-native';
 import FormInput from '../Components/FormInput';
 import FormButton from '../Components/FormButton';
+import {AuthContext} from '../navigation/AuthProvider';
 
-const LoginScreen = () => {
+const LoginScreen = ({navigation}) => {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
 
-  //   const {login} = useContext();
+  const {login} = useContext(AuthContext);
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
